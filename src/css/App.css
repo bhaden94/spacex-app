@@ -1,0 +1,230 @@
+.App {
+  min-height: 100vh;
+  background-color: #4B515D;
+  color: #616161;
+  letter-spacing: .08rem;
+  font-family: 'Raleway', sans-serif;
+}
+
+.page {
+  display: grid;
+  grid-template-columns: 20vw auto;
+}
+
+
+
+/*  
+*
+*  Sidebar
+*
+*/
+
+#sidebar {
+  position: fixed;
+  width: 20vw;
+}
+
+.sidebar-list {
+  padding: 0;
+  height: 100vh;
+  background-color: #3E4551;
+  list-style-type: none;
+  box-shadow: 2px 2px 5px -2px black;
+}
+
+.sidebar-list li {
+  color: #fff;
+  padding: 20px 0 20px 15px;
+  border-bottom: 1px solid #fff;
+}
+
+.sidebar-list li:hover {
+  background-color: #4B515D;
+}
+
+.sidebar-open-close {
+  cursor: pointer;
+  position: absolute;
+  right: -50px;
+  margin-top: 10px;
+  width: 40px;
+  z-index: 10;
+}
+
+.sidebar-hide:after,
+.sidebar-show:after,
+.sidebar-hide:before,
+.sidebar-show:before, 
+.sidebar-hide div {
+  background-color: #aa66cc;
+  border-radius: 3px;
+  content: '';
+  display: block;
+  height: 5px;
+  margin: 7px 0;
+  transition: all .3s ease-in-out;
+}
+
+.sidebar-show:before {
+  transform: translateY(12px) rotate(135deg);
+}
+
+.sidebar-show:after {
+  transform: translateY(0px) rotate(-135deg);
+}
+
+.sidebar-show div {
+  transform: scale(0);
+}
+
+
+
+/*  
+*
+*  Main Section of Screen
+*
+*/
+
+.main {
+  grid-column-start: 2;
+}
+
+.main-header {
+  color: #fff;
+  padding: 2%;
+  margin: 0;
+  text-align: center;
+}
+
+hr {
+  border: 0;
+  height: 1px;
+  background-image: linear-gradient(to right, rgba(0, 0, 0, 0), rgb(255, 255, 255), rgba(0, 0, 0, 0));
+}
+
+
+
+/*  
+*
+*  Timeline  
+*
+*/
+
+.timeline {
+  text-align: center;
+}
+
+
+/*  
+*
+*  Timeline Cards  
+*
+*/
+
+.timeline-cards {
+  text-align: left;
+}
+
+.timeline-card-date {
+  color: #616161;
+}
+
+.timeline-card-btn {
+  margin-top: 15px;
+}
+
+.icon-img {
+  width: 100%;
+  border-radius: 50%;
+}
+
+.timeline-card-load-btn {
+  color: #aa66cc;
+}
+
+.timeline-card-load-icon {
+  background: #4B515D;
+}
+
+.timeline-card-load-more-icon {
+  cursor: pointer;
+  display: flex;
+  background: #fff;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+}
+
+.timeline-card-load-more-icon:hover {
+  background: #4B515D;
+}
+
+
+
+/*  
+*
+*  Media Queries
+*
+*/
+
+@media only screen and (min-width: 1170px) {
+  .timeline-card-date {
+    color: #fff;
+  }
+}
+
+@media only screen and (max-width: 768px) {
+  .page {
+    display: inline;
+  }
+
+  .sidebar-list {
+    box-shadow: none;
+  }
+
+  #sidebar {
+    position: fixed;
+    width: 60vw;
+    z-index: 10;
+    transition: all .3s
+              cubic-bezier(0, .52, 0, 1);
+  }
+
+  #sidebar.show {
+    transform: translate3d(0vw, 0, 0);
+  }
+
+  #sidebar.hide {
+    transform: translate3d(-61vw, 0, 0);
+  }
+
+  .main-header {
+    padding-top: 55px;
+    font-size: 2rem;
+  }
+}
+
+@media only screen and (max-width: 552px) {
+  .main-header {
+    font-size: 1.75rem;
+  }
+}
+
+@media only screen and (max-width: 360px) {
+  .sidebar-open-close {
+    right: -40px;
+    width: 30px;
+  }
+
+  #sidebar {
+    width: 80vw;
+  }
+
+  #sidebar.show {
+    transform: translate3d(0vw, 0, 0);
+  }
+
+  #sidebar.hide {
+    transform: translate3d(-81vw, 0, 0);
+  }
+}
