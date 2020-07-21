@@ -2,7 +2,7 @@ import React from "react";
 import { BrowserRouter, Route } from "react-router-dom";
 import Sidebar from "./components/Sidebar/Sidebar";
 import MainArea from "./components/MainArea";
-import "./App.css";
+import "./css/App.css";
 
 function App() {
 

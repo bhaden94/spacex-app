@@ -84,7 +84,7 @@ function Timeline({location}) {
               {location.pathname === "/past" ? 
               <VerticalTimelineElement
                 iconOnClick={loadMore}
-                iconClassName="timeline-card-load-icon"
+                iconClassName="timeline-card-load-more-icon"
                 icon={isLoadingMore ? loadingIcon : loadMoreBtn}
               /> : 
               <VerticalTimelineElement
