@@ -4,14 +4,6 @@ import { VerticalTimelineElement } from "react-vertical-timeline-component";
 import { MDBBtn } from "mdbreact";
 import "react-vertical-timeline-component/style.min.css";
 
-/*
-needs:
-    mission patch for iconStyle
-    mission date for date
-    needs title for h3 (Either title for home or rocket_name for other)
-    needs details for p
-    needs link for button (either article link or video link)
-*/
 function TimelineElement({data, location}) {
   const [title, setTitle] = useState("Title")
   const [date, setDate] = useState()
@@ -66,6 +58,7 @@ function TimelineElement({data, location}) {
       date={date}
       dateClassName="timeline-card-date"
       icon={<img className="icon-img" src={patch} alt="mission patch" />}
+      iconStyle={{ background: "#3E4551" }}
     >
       <h3 className="vertical-timeline-element-title">{title}</h3>
       <p>{details}</p>
