@@ -31,9 +31,9 @@ function Sidebar() {
       : 
       <div />}
       <ul className="sidebar-list">
-        <Link to="/"><li>Home</li></Link>
-        <Link to="/upcoming"><li>Upcoming Launches</li></Link>
-        <Link to="past"><li>Past Launches</li></Link>
+        <Link onClick={setSidebar} to="/"><li>Home</li></Link>
+        <Link onClick={setSidebar} to="/upcoming"><li>Upcoming Launches</li></Link>
+        <Link onClick={setSidebar} to="past"><li>Past Launches</li></Link>
       </ul>
     </div>
   );
