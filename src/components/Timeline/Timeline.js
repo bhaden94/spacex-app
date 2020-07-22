@@ -4,23 +4,23 @@ import {
   VerticalTimeline,
   VerticalTimelineElement,
 } from "react-vertical-timeline-component";
-import { MDBBtn, MDBIcon } from "mdbreact";
+import { MDBIcon } from "mdbreact";
+import { useMediaQuery } from 'react-responsive'
 import TimelineElement from "./TimelineElement";
 import "react-vertical-timeline-component/style.min.css";
+
+
 
 function Timeline({location}) {
   const [data, setData] = useState([]);
   const [year, setYear] = useState(new Date().getFullYear())
   const [isLoading, setIsLoading] = useState(false)
   const [isLoadingMore, setIsLoadingMore] = useState(false)
+  const isMobile = useMediaQuery({ query: '(max-width: 768px)' })
   const loadingIcon = 
     <div className="spinner-border text-secondary" role="status">
       <span className="sr-only">Loading...</span>
     </div>
-
-    {/* <MDBBtn className="timeline-card-load-btn" color="secondary">
-      <MDBIcon icon="plus" size="2x" />
-    </MDBBtn> */}
 
   const loadMoreBtn = 
     <MDBIcon className="timeline-card-load-btn" icon="plus" size="2x" />
@@ -78,7 +78,7 @@ function Timeline({location}) {
      <div className="timeline">
         {isLoading ? loadingIcon :
           <div className="timeline-cards">
-            <VerticalTimeline>
+            <VerticalTimeline animate={isMobile ? false : true}>
               {data.map((e, index) => <TimelineElement key={index} data={e} />)}
 
               {location.pathname === "/past" ? 
