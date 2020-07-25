@@ -1,21 +1,22 @@
 import React, { useState, useEffect } from "react";
+import {withRouter} from "react-router-dom";
 
-function Header({path}) {
+function Header({location}) {
   const [header, setHeader] =  useState("History")
 
     useEffect(() => {
-        if(path
+        if(location.pathname
          === "/upcoming") {
             setHeader("Next Launch")
         }
-        else if(path
+        else if(location.pathname
          === "/past") {
             setHeader("Past Launches")
         }
         else {
             setHeader("History")
         }
-    }, [path
+    }, [location.pathname
   ])
 
   return (
@@ -25,4 +26,4 @@ function Header({path}) {
   );
 }
 
-export default Header;
+export default withRouter(Header);

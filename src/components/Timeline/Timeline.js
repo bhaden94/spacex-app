@@ -5,6 +5,7 @@ import {
   VerticalTimelineElement,
 } from "react-vertical-timeline-component";
 import { MDBIcon } from "mdbreact";
+import LoadingIcon from './../LoadingIcon';
 import { useMediaQuery } from 'react-responsive'
 import TimelineElement from "./TimelineElement";
 import "react-vertical-timeline-component/style.min.css";
@@ -17,21 +18,9 @@ function Timeline({location}) {
   const [isLoading, setIsLoading] = useState(false)
   const [isLoadingMore, setIsLoadingMore] = useState(false)
   const isMobile = useMediaQuery({ query: '(max-width: 768px)' })
-  const loadingIcon = 
-    <div className="spinner-border text-secondary" role="status">
-      <span className="sr-only">Loading...</span>
-    </div>
 
   const loadMoreBtn = 
     <MDBIcon className="timeline-card-load-btn" icon="plus" size="2x" />
-
-
-  const fetchUpcoming = async () => {
-    setYear(new Date().getFullYear())
-    const res = await fetch("https://api.spacexdata.com/v4/launches/next")
-    const json = await res.json()
-    return json
-  }
 
   // https://github.com/r-spacex/SpaceX-API/blob/master/docs/v4/launches/query.md
   const fetchPast = async () => {
@@ -85,11 +74,7 @@ function Timeline({location}) {
   const detectPath = async () => {
     setIsLoading(true)
     let currentData
-    if (location.pathname === "/upcoming") {
-      currentData = await fetchUpcoming()
-      currentData = [currentData]
-    }
-    else if (location.pathname === "/past") {
+    if (location.pathname === "/past") {
       currentData = await fetchPast()
     }
     else {
@@ -112,7 +97,7 @@ function Timeline({location}) {
 
   return (
      <div className="timeline">
-        {isLoading ? loadingIcon :
+        {isLoading ? <LoadingIcon /> :
           <div className="timeline-cards">
             <VerticalTimeline animate={isMobile ? false : true}>
               {data.map((e, index) => <TimelineElement key={index} data={e} />)}
@@ -121,7 +106,7 @@ function Timeline({location}) {
               <VerticalTimelineElement
                 iconOnClick={loadMore}
                 iconClassName="timeline-card-load-more-icon"
-                icon={isLoadingMore ? loadingIcon : loadMoreBtn}
+                icon={isLoadingMore ? <LoadingIcon /> : loadMoreBtn}
               /> : 
               <VerticalTimelineElement
                 iconClassName="timeline-card-load-icon"

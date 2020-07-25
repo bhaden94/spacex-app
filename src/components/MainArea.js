@@ -1,17 +1,22 @@
 import React from "react";
+import { Switch, Route } from "react-router-dom";
 import Header from "./Header";
 import Timeline from "./Timeline/Timeline";
+import Upcoming from "./Upcoming";
 
-function MainArea({location}) {
+function MainArea() {
     
   return (
-    <div className="page">
+   
+      <div className="page">
         <div className="main">
-        <Header path={location.pathname} />
-        <hr />
-        <Timeline />
-    </div>
-    </div>
+          <Header />
+          <hr />
+          <Route exact path={["/", "/past"]} component={Timeline} />
+          <Route exact path="/upcoming" component={Upcoming} />  
+        </div>
+      </div>
+    
   );
 }
 

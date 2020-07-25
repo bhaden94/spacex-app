@@ -32,7 +32,7 @@ function Sidebar() {
       <div />}
       <ul className="sidebar-list">
         <Link onClick={setSidebar} to="/"><li>Home</li></Link>
-        <Link onClick={setSidebar} to="/upcoming"><li>Upcoming Launches</li></Link>
+        <Link onClick={setSidebar} to="/upcoming"><li>Next Launch</li></Link>
         <Link onClick={setSidebar} to="past"><li>Past Launches</li></Link>
       </ul>
     </div>

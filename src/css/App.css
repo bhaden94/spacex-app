@@ -160,6 +160,15 @@ hr {
 }
 
 
+/*  
+*
+*  Jumbotron
+*
+*/
+.jumbotron {
+  text-shadow: #212121 0.2em 0.2em 0.2em;
+}
+
 
 /*  
 *
