@@ -6,7 +6,7 @@ function Header({path}) {
     useEffect(() => {
         if(path
          === "/upcoming") {
-            setHeader("Upcoming Launches")
+            setHeader("Next Launch")
         }
         else if(path
          === "/past") {

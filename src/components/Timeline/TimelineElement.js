@@ -16,21 +16,23 @@ function TimelineElement({data, location}) {
   };
 
   const setUpcomingPastData = () => {
-    setTitle(data.mission_name)
-    setDate(new Date(data.launch_date_utc).toLocaleString())
+    setTitle(data.name)
+    setDate(new Date(data.date_utc).toLocaleString())
     if (data.details) {
       setDetails(data.details)
     }
     if (location.pathname === "/upcoming") {
-      setLink(data.links.reddit_campaign)
+      setLink(data.links.reddit)
       setBtnText("Reddit Link")
     }
     else {
-      setLink(data.links.video_link)
+      setLink(data.links.webcast)
       setBtnText("Video Link")
     }
-    if (data.links.mission_patch) {
-      setPatch(data.links.mission_patch)
+    if (data.links.patch) {
+      if(data.links.patch.small) {
+        setPatch(data.links.patch.small)
+      }
     }
   }
 

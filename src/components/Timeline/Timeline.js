@@ -28,18 +28,53 @@ function Timeline({location}) {
 
   const fetchUpcoming = async () => {
     setYear(new Date().getFullYear())
-    const res = await fetch("https://api.spacexdata.com/v3/launches/upcoming")
+    const res = await fetch("https://api.spacexdata.com/v4/launches/next")
     const json = await res.json()
     return json
   }
 
+  // https://github.com/r-spacex/SpaceX-API/blob/master/docs/v4/launches/query.md
   const fetchPast = async () => {
-    const res = await fetch(`https://api.spacexdata.com/v3/launches/past?order=desc&start=${year}-01-01&end=${year}-12-31`)
+    const reqOptions = {
+      method: 'POST',
+      headers: {
+        'Accept': 'application/json',
+        'Content-Type': 'application/json'
+      },
+      body: JSON.stringify({
+        query: {
+          date_utc: {
+            $gte: `${year}-01-01T00:00:00.000Z`,
+            $lte: `${year}-12-31T23:59:59.000Z`
+          },
+          $or: [
+            {
+              upcoming: false
+            }
+          ]
+        },
+        options: {
+          sort: {
+            date_utc: "desc"
+          },
+          populate: [
+            {
+              path: "past"
+            }
+          ],
+          limit: "50"
+        }
+      })
+    }
+    const res = await fetch(`https://api.spacexdata.com/v4/launches/query`, reqOptions)
     const json = await res.json()
     setYear(year - 1)
-    return json
+    return json.docs
   }
 
+  // this method still uses v3 of the spacexapi
+  // v4 does not have history so continue using this
+  // until we can replace the home page
   const fetchHistory = async () => {
     setYear(new Date().getFullYear())
     const res = await fetch("https://api.spacexdata.com/v3/history")
@@ -52,6 +87,7 @@ function Timeline({location}) {
     let currentData
     if (location.pathname === "/upcoming") {
       currentData = await fetchUpcoming()
+      currentData = [currentData]
     }
     else if (location.pathname === "/past") {
       currentData = await fetchPast()
