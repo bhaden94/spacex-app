@@ -1,68 +1,189 @@
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
-## Available Scripts
+<!-- PROJECT SHIELDS -->
+<!--
+*** I'm using markdown "reference style" links for readability.
+*** Reference links are enclosed in brackets [ ] instead of parentheses ( ).
+*** See the bottom of this document for the declaration of the reference variables
+*** for contributors-url, forks-url, etc. This is an optional, concise syntax you may use.
+*** https://www.markdownguide.org/basic-syntax/#reference-style-links
+-->
+<!-- [![Contributors][contributors-shield]][contributors-url] -->
+[![Forks][forks-shield]][forks-url]
+[![Stargazers][stars-shield]][stars-url]
+[![Issues][issues-shield]][issues-url]
+[![MIT License][license-shield]][license-url]
+[![LinkedIn][linkedin-shield]][linkedin-url]
 
-In the project directory, you can run:
 
-### `npm start`
 
-Runs the app in the development mode.<br />
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+<!-- PROJECT LOGO -->
+<br />
+<p align="center">
+  <a href="https://blooming-ridge-06967.herokuapp.com/">
+    <img src="https://pbs.twimg.com/profile_images/1082744382585856001/rH_k3PtQ_400x400.jpg" alt="Logo" width="80" height="80">
+  </a>
 
-The page will reload if you make edits.<br />
-You will also see any lint errors in the console.
+  <h3 align="center">SpaceX Launch & History Timeline</h3>
 
-### `npm test`
+  <p align="center">
+    Quickly see milestones, past launches, and the next launch of SpaceX rockets.
+    <br />
+    <a href="https://blooming-ridge-06967.herokuapp.com/">View On Heroku</a>
+    ·
+    <a href="https://github.com/bhaden94/spacex-app/issues">Report Bug</a>
+    ·
+    <a href="https://github.com/bhaden94/spacex-app/issues">Request Feature</a>
+  </p>
+</p>
 
-Launches the test runner in the interactive watch mode.<br />
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
 
-### `npm run build`
 
-Builds the app for production to the `build` folder.<br />
-It correctly bundles React in production mode and optimizes the build for the best performance.
+<!-- TABLE OF CONTENTS -->
+## Table of Contents
 
-The build is minified and the filenames include the hashes.<br />
-Your app is ready to be deployed!
+* [About the Project](#about-the-project)
+  * [Built With](#built-with)
+* [Getting Started](#getting-started)
+  * [Prerequisites](#prerequisites)
+  * [Installation Without Docker](#installation-without-docker)
+  * [Installation With Docker](#installation-with-docker)
+* [Usage](#usage)
+* [Roadmap](#roadmap)
+* [Contributing](#contributing)
+* [License](#license)
+* [Contact](#contact)
+* [Acknowledgements](#acknowledgements)
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
 
-### `npm run eject`
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+<!-- ABOUT THE PROJECT -->
+## About The Project
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+[![Desktop past view][desktop-screenshot]](images/screenshot1.JPG)
+[![Desktop next view][desktop-screenshot]](images/screenshot2.JPG)
+[![Mobile past view][desktop-screenshot]](images/mobile-screenshot1.JPG)
+[![Desktop next view][desktop-screenshot]](images/mobile-screenshot1.JPG)
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
 
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
 
-## Learn More
+### Built With
+* [Create React App](https://create-react-app.dev/)
+* [MDBootstrap](https://mdbootstrap.com/docs/react/)
+* [Docker](https://www.docker.com/)
+* [SpaceX-API](https://github.com/r-spacex/SpaceX-API)
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
 
-To learn React, check out the [React documentation](https://reactjs.org/).
 
-### Code Splitting
+<!-- GETTING STARTED -->
+## Getting Started
 
-This section has moved here: https://facebook.github.io/create-react-app/docs/code-splitting
+This app was dockerized so if you want to install and use it on your local machine follow these steps.
 
-### Analyzing the Bundle Size
+### Prerequisites
 
-This section has moved here: https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size
+To run this in a Docker container you must have Docker installed on your machine or go [here](https://www.docker.com/get-started) to get started.
 
-### Making a Progressive Web App
+To run this out of a Docker container simply run these commands:
 
-This section has moved here: https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app
+### Installation Without Docker
 
-### Advanced Configuration
+1. Clone the repo
+```sh
+git clone https://github.com/bhaden94/spacex-app
+```
+2. Install NPM packages
+```sh
+npm install
+```
+3. Start the react app
+```sh
+npm start
+```
 
-This section has moved here: https://facebook.github.io/create-react-app/docs/advanced-configuration
+### Installation With Docker
 
-### Deployment
+1. Make sure Docker is installed and running
+2. Clone the repo
+```sh
+git clone https://github.com/bhaden94/spacex-app
+```
+3. Build Docker image
+```sh
+docker build -t spacex-app .
+```
+4. Run the container
+```sh
+docker run -dp 80:3000 spacex-app
+```
+5. Navigate to [http://localhost:3000](http://localhost:3000)
 
-This section has moved here: https://facebook.github.io/create-react-app/docs/deployment
 
-### `npm run build` fails to minify
 
-This section has moved here: https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify
+<!-- USAGE EXAMPLES -->
+## Usage
+
+This app was built to give a brief snapshot of SpaceX and their upcoming and past launches with an easy to use and navigate UI.
+
+<!-- ROADMAP -->
+## Roadmap
+
+See the [open issues](https://github.com/bhaden94/spacex-app/issues) for a list of proposed features (and known issues).
+
+
+<!-- CONTRIBUTING -->
+## Contributing
+
+Contributions are what make the open source community such an amazing place to be; learn, inspire, and create. Any contributions you make are **greatly appreciated**.
+
+1. Fork the Project
+2. Create your Feature Branch (`git checkout -b feature/AmazingFeature`)
+3. Commit your Changes (`git commit -m 'Add some AmazingFeature'`)
+4. Push to the Branch (`git push origin feature/AmazingFeature`)
+5. Open a Pull Request
+
+
+
+<!-- LICENSE -->
+## License
+
+Distributed under the MIT License. See `LICENSE` for more information.
+
+
+
+<!-- CONTACT -->
+## Contact
+
+Brady Haden - [LinkedIn](https://www.linkedin.com/in/brady-s-haden/)
+
+
+
+
+<!-- ACKNOWLEDGEMENTS -->
+## Acknowledgements
+* [React Vertical Timeline](https://stephane-monnot.github.io/react-vertical-timeline/#/)
+* [GitHub Emoji Cheat Sheet](https://www.webpagefx.com/tools/emoji-cheat-sheet)
+* [Img Shields](https://shields.io)
+
+
+
+
+
+<!-- MARKDOWN LINKS & IMAGES -->
+<!-- https://www.markdownguide.org/basic-syntax/#reference-style-links -->
+<!-- [contributors-shield]: https://img.shields.io/github/contributors/othneildrew/Best-README-Template.svg?style=flat-square
+[contributors-url]: https://github.com/othneildrew/Best-README-Template/graphs/contributors -->
+[forks-shield]: https://img.shields.io/github/forks/bhaden94/spacex-app.svg
+[forks-url]: https://github.com/bhaden94/spacex-app/network/members
+
+[stars-shield]: https://img.shields.io/github/stars/bhaden94/spacex-app.svg
+[stars-url]: https://github.com/bhaden94/spacex-app/stargazers
+
+[issues-shield]: https://img.shields.io/github/issues/bhaden94/spacex-app.svg
+[issues-url]: https://github.com/bhaden94/spacex-app/issues
+
+[license-shield]: https://img.shields.io/github/license/bhaden94/spacex-app.svg
+[license-url]: https://github.com/bhaden94/spacex-app/blob/master/LICENSE.txt
+
+[linkedin-shield]: https://img.shields.io/badge/-LinkedIn-black.svg?logo=linkedin&colorB=555
+[linkedin-url]: https://www.linkedin.com/in/brady-s-haden/
+[product-screenshot]: images/screenshot.png
