@@ -59,10 +59,10 @@
 <!-- ABOUT THE PROJECT -->
 ## About The Project
 
-[![Desktop past view][desktop-screenshot]](images/screenshot1.JPG)
-[![Desktop next view][desktop-screenshot]](images/screenshot2.JPG)
-[![Mobile past view][desktop-screenshot]](images/mobile-screenshot1.JPG)
-[![Desktop next view][desktop-screenshot]](images/mobile-screenshot1.JPG)
+![Desktop past view](images/screenshot1.JPG)
+![Desktop next view](images/screenshot2.JPG)
+![Mobile past view](images/mobile-screenshot1.JPG)
+![Desktop next view](images/mobile-screenshot2.JPG)
 
 
 
