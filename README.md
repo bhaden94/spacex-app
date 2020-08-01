@@ -81,9 +81,7 @@ This app was dockerized so if you want to install and use it on your local machi
 
 ### Prerequisites
 
-To run this in a Docker container you must have Docker installed on your machine or go [here](https://www.docker.com/get-started) to get started.
-
-To run this out of a Docker container simply run these commands:
+To run this in a Docker container you must have Docker installed on your machine. Go [here](https://www.docker.com/get-started) to get started if you don't.
 
 ### Installation Without Docker
 
@@ -122,7 +120,7 @@ docker run -dp 80:3000 spacex-app
 <!-- USAGE EXAMPLES -->
 ## Usage
 
-This app was built to give a brief snapshot of SpaceX and their upcoming and past launches with an easy to use and navigate UI.
+This app was built to give a brief snapshot of SpaceX and their history along with upcoming and past launches.
 
 <!-- ROADMAP -->
 ## Roadmap
