@@ -23,7 +23,7 @@
     <img src="https://pbs.twimg.com/profile_images/1082744382585856001/rH_k3PtQ_400x400.jpg" alt="Logo" width="80" height="80">
   </a>
 
-  <h3 align="center">SpaceX Launch & History Timeline</h3>
+  <h3 align="center">SpaceX Launch & History Timeline :rocket:</h3>
 
   <p align="center">
     Quickly see milestones, past launches, and the next launch of SpaceX rockets.
@@ -70,7 +70,7 @@
 * [Create React App](https://create-react-app.dev/)
 * [MDBootstrap](https://mdbootstrap.com/docs/react/)
 * [Docker](https://www.docker.com/)
-* [SpaceX-API](https://github.com/r-spacex/SpaceX-API)
+* [SpaceX-API](https://github.com/r-spacex/SpaceX-API) :rocket:
 
 
 
