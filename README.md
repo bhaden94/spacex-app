@@ -111,7 +111,7 @@ docker build -t spacex-app .
 ```
 4. Run the container
 ```sh
-docker run -dp 80:3000 spacex-app
+docker run -dp 3000:80 spacex-app
 ```
 5. Navigate to [http://localhost:3000](http://localhost:3000)
 
