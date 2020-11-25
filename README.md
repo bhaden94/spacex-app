@@ -19,7 +19,7 @@
 <!-- PROJECT LOGO -->
 <br />
 <p align="center">
-  <a href="https://blooming-ridge-06967.herokuapp.com/">
+  <a href="https://spacex-timline.herokuapp.com/">
     <img src="https://pbs.twimg.com/profile_images/1082744382585856001/rH_k3PtQ_400x400.jpg" alt="Logo" width="80" height="80">
   </a>
 
@@ -28,7 +28,7 @@
   <p align="center">
     Quickly see milestones, past launches, and the next launch of SpaceX rockets.
     <br />
-    <a href="https://blooming-ridge-06967.herokuapp.com/">View On Heroku</a>
+    <a href="https://spacex-timline.herokuapp.com/">View On Heroku</a>
     ·
     <a href="https://github.com/bhaden94/spacex-app/issues">Report Bug</a>
     ·
