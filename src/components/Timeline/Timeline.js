@@ -19,8 +19,7 @@ function Timeline({location}) {
   const [isLoadingMore, setIsLoadingMore] = useState(false)
   const isMobile = useMediaQuery({ query: '(max-width: 768px)' })
 
-  const loadMoreBtn = 
-    <MDBIcon className="timeline-card-load-btn" icon="plus" size="2x" />
+  const loadMoreBtn = (<MDBIcon className="timeline-card-load-btn" icon="plus" size="2x" />)
 
   // https://github.com/r-spacex/SpaceX-API/blob/master/docs/v4/launches/query.md
   const fetchPast = async () => {

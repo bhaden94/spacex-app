@@ -65,7 +65,7 @@ function TimelineElement({data, location}) {
       <h3 className="vertical-timeline-element-title">{title}</h3>
       <p>{details}</p>
       <div>
-        <MDBBtn href={link} target="_blank" className="timeline-card-btn" color="secondary">
+        <MDBBtn href={link} target="_blank" rel="noreferrer" className="timeline-card-btn" color="secondary">
           {btnText}
         </MDBBtn>
       </div>

@@ -45,12 +45,14 @@ function Upcoming() {
                             <MDBCol className="pb-5">
                             {isNextLaunch ?
                                 <div>
-                                    <MDBCardTitle className="font-bold"><DateCountdown dateTo={dateTime} mostSignificantFigure="day" /></MDBCardTitle>
+                                    <MDBCardTitle className="font-bold">
+                                        <DateCountdown dateTo={dateTime} mostSignificantFigure="day" />
+                                    </MDBCardTitle>
                                     <br />
                                     <img src={patch} style={{width: "100px"}} />
                                     <MDBCardTitle className="h1-responsive pt-3 pb-3 font-bold">{title}</MDBCardTitle>
                                     <p className="mb-5">{details}</p>
-                                    <MDBBtn href={link} target="_blank" outline color="light">Reddit Link</MDBBtn>
+                                    <MDBBtn href={link} target="_blank" rel="noreferrer" outline color="light">Reddit Link</MDBBtn>
                                 </div>
                                 :
                                 <div>
