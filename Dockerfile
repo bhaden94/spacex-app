@@ -19,8 +19,10 @@ COPY ./nginx.config /etc/nginx/nginx.template
 CMD ["/bin/sh", "-c", "envsubst < /etc/nginx/nginx.template > /etc/nginx/conf.d/default.conf && nginx -g 'daemon off;'"]
 COPY --from=builder /opt/web/build /usr/share/nginx/html
 
-# pushing to heroku
+# PUSHING TO HEROKU
 # heroku login
 # heroku container:login
+# heroku git:remote -a spacex-timline
 # docker build -t spacex-app .
-#
+# heroku container:push web
+# heroku container:release web
