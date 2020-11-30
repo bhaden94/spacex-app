@@ -30,9 +30,9 @@
     <br />
     <a href="https://spacex-timline.herokuapp.com/">View On Heroku</a>
     ·
-    <a href="https://github.com/bhaden94/spacex-app/issues">Report Bug</a>
+    <a href="https://github.com/bhaden94/spacex-app/issues">Report Bug/Request Feature</a>
     ·
-    <a href="https://github.com/bhaden94/spacex-app/issues">Request Feature</a>
+    <a href="https://frontend.code-inspector.com/public/project/16563/spacex-app/dashboard">Code Inspector Dashboard</a>
   </p>
 </p>
 
