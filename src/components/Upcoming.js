@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react";
 import {withRouter} from "react-router-dom";
-import { MDBJumbotron, MDBBtn, MDBContainer, MDBRow, MDBCol, MDBCardTitle, MDBIcon } from "mdbreact";
+import { MDBJumbotron, MDBBtn, MDBContainer, MDBRow, MDBCol, MDBCardTitle } from "mdbreact";
 import DateCountdown from 'react-date-countdown-timer';
 import LoadingIcon from './LoadingIcon';
 
@@ -49,7 +49,7 @@ function Upcoming() {
                                         <DateCountdown dateTo={dateTime} mostSignificantFigure="day" />
                                     </MDBCardTitle>
                                     <br />
-                                    <img src={patch} style={{width: "100px"}} />
+                                    <img src={patch} style={{width: "100px"}} alt='mission patch' />
                                     <MDBCardTitle className="h1-responsive pt-3 pb-3 font-bold">{title}</MDBCardTitle>
                                     <p className="mb-5">{details}</p>
                                     <MDBBtn href={link} target="_blank" rel="noreferrer" outline color="light">Reddit Link</MDBBtn>
@@ -58,7 +58,7 @@ function Upcoming() {
                                 <div>
                                     <MDBCardTitle className="font-bold">There is no data available for the next SpaceX launch</MDBCardTitle>
                                     <br />
-                                    <img src={patch} style={{width: "100px"}} />
+                                    <img src={patch} style={{width: "100px"}} alt='mission patch' />
                                     <MDBCardTitle className="h1-responsive pt-3 pb-3 font-bold"></MDBCardTitle>
                                     <p className="mb-5"></p>
                                 </div>
