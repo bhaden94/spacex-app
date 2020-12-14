@@ -7,7 +7,7 @@ import "./css/App.css";
 function App() {
 
   return (
-    <BrowserRouter>
+    <BrowserRouter basename="/spacex-app">
       <div className="App">
         <Route path="/" component={Sidebar} />
         <Route path="/" component={MainArea} /> 
