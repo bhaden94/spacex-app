@@ -21,42 +21,43 @@ function Timeline({ location }) {
 		<MDBIcon className="timeline-card-load-btn" icon="plus" size="2x" />
 	);
 
+	const pastReqOptions = {
+		method: "POST",
+		headers: {
+			Accept: "application/json",
+			"Content-Type": "application/json",
+		},
+		body: JSON.stringify({
+			query: {
+				date_utc: {
+					$gte: `${year}-01-01T00:00:00.000Z`,
+					$lte: `${year}-12-31T23:59:59.000Z`,
+				},
+				$or: [
+					{
+						upcoming: false,
+					},
+				],
+			},
+			options: {
+				sort: {
+					date_utc: "desc",
+				},
+				populate: [
+					{
+						path: "past",
+					},
+				],
+				limit: "50",
+			},
+		}),
+	};
+
 	// https://github.com/r-spacex/SpaceX-API/blob/master/docs/v4/launches/query.md
 	const fetchPast = async () => {
-		const reqOptions = {
-			method: "POST",
-			headers: {
-				Accept: "application/json",
-				"Content-Type": "application/json",
-			},
-			body: JSON.stringify({
-				query: {
-					date_utc: {
-						$gte: `${year}-01-01T00:00:00.000Z`,
-						$lte: `${year}-12-31T23:59:59.000Z`,
-					},
-					$or: [
-						{
-							upcoming: false,
-						},
-					],
-				},
-				options: {
-					sort: {
-						date_utc: "desc",
-					},
-					populate: [
-						{
-							path: "past",
-						},
-					],
-					limit: "50",
-				},
-			}),
-		};
 		const res = await fetch(
 			`https://api.spacexdata.com/v4/launches/query`,
-			reqOptions
+			pastReqOptions
 		);
 		const json = await res.json();
 		setYear(year - 1);
@@ -85,8 +86,8 @@ function Timeline({ location }) {
 			setData(currentData);
 			setIsLoading(false);
 		}
-    detectPath();
-    // eslint-disable-next-line react-hooks/exhaustive-deps
+		detectPath();
+		// eslint-disable-next-line react-hooks/exhaustive-deps
 	}, [location]);
 
 	const loadMore = async () => {

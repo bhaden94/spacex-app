@@ -28,7 +28,7 @@
   <p align="center">
     Quickly see milestones, past launches, and the next launch of SpaceX rockets.
     <br />
-    <a href="https://spacex-timline.herokuapp.com/">View On Heroku</a>
+    <a href="https://bhaden94.github.io/spacex-app/">View Live Application</a>
     ·
     <a href="https://github.com/bhaden94/spacex-app/issues">Report Bug/Request Feature</a>
     ·
