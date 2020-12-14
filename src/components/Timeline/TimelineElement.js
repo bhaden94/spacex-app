@@ -51,6 +51,7 @@ function TimelineElement({data, location}) {
     else {
       setHistoryData()
     }
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [location])
 
   return (
