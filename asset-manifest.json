@@ -1,25 +1,25 @@
 {
   "files": {
-    "main.css": "/spacex-app/static/css/main.028b757f.chunk.css",
-    "main.js": "/spacex-app/static/js/main.ea8c7ee3.chunk.js",
-    "main.js.map": "/spacex-app/static/js/main.ea8c7ee3.chunk.js.map",
-    "runtime-main.js": "/spacex-app/static/js/runtime-main.18b70cb7.js",
-    "runtime-main.js.map": "/spacex-app/static/js/runtime-main.18b70cb7.js.map",
-    "static/css/2.975dceda.chunk.css": "/spacex-app/static/css/2.975dceda.chunk.css",
-    "static/js/2.7ac56b42.chunk.js": "/spacex-app/static/js/2.7ac56b42.chunk.js",
-    "static/js/2.7ac56b42.chunk.js.map": "/spacex-app/static/js/2.7ac56b42.chunk.js.map",
-    "index.html": "/spacex-app/index.html",
-    "static/css/2.975dceda.chunk.css.map": "/spacex-app/static/css/2.975dceda.chunk.css.map",
-    "static/css/main.028b757f.chunk.css.map": "/spacex-app/static/css/main.028b757f.chunk.css.map",
-    "static/js/2.7ac56b42.chunk.js.LICENSE.txt": "/spacex-app/static/js/2.7ac56b42.chunk.js.LICENSE.txt",
-    "static/media/mdb.css": "/spacex-app/static/media/arrow_right.0897f985.svg",
-    "static/media/all.min.css": "/spacex-app/static/media/fa-solid-900.dfaa060a.eot"
+    "main.css": "/static/css/main.028b757f.chunk.css",
+    "main.js": "/static/js/main.873426ed.chunk.js",
+    "main.js.map": "/static/js/main.873426ed.chunk.js.map",
+    "runtime-main.js": "/static/js/runtime-main.aafd5c6f.js",
+    "runtime-main.js.map": "/static/js/runtime-main.aafd5c6f.js.map",
+    "static/css/2.37047944.chunk.css": "/static/css/2.37047944.chunk.css",
+    "static/js/2.7ac56b42.chunk.js": "/static/js/2.7ac56b42.chunk.js",
+    "static/js/2.7ac56b42.chunk.js.map": "/static/js/2.7ac56b42.chunk.js.map",
+    "index.html": "/index.html",
+    "static/css/2.37047944.chunk.css.map": "/static/css/2.37047944.chunk.css.map",
+    "static/css/main.028b757f.chunk.css.map": "/static/css/main.028b757f.chunk.css.map",
+    "static/js/2.7ac56b42.chunk.js.LICENSE.txt": "/static/js/2.7ac56b42.chunk.js.LICENSE.txt",
+    "static/media/mdb.css": "/static/media/arrow_right.0897f985.svg",
+    "static/media/all.min.css": "/static/media/fa-solid-900.dfaa060a.eot"
   },
   "entrypoints": [
-    "static/js/runtime-main.18b70cb7.js",
-    "static/css/2.975dceda.chunk.css",
+    "static/js/runtime-main.aafd5c6f.js",
+    "static/css/2.37047944.chunk.css",
     "static/js/2.7ac56b42.chunk.js",
     "static/css/main.028b757f.chunk.css",
-    "static/js/main.ea8c7ee3.chunk.js"
+    "static/js/main.873426ed.chunk.js"
   ]
 }
