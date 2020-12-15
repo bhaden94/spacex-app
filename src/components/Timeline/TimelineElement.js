@@ -30,10 +30,8 @@ function TimelineElement({ data, location }) {
 			setLink(data.links.webcast);
 			setBtnText("Video Link");
 		}
-		if (data.links.patch) {
-			if (data.links.patch.small) {
-				setPatch(data.links.patch.small);
-			}
+		if (data.links.patch?.small) {
+			setPatch(data.links.patch.small);
 		}
 	};
 
