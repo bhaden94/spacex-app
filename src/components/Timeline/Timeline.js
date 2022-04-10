@@ -43,11 +43,6 @@ function Timeline({ location }) {
 				sort: {
 					date_utc: "desc",
 				},
-				populate: [
-					{
-						path: "past",
-					},
-				],
 				limit: "50",
 			},
 		}),
